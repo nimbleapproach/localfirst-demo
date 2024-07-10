@@ -1,0 +1,11 @@
+services:
+  couchdb:
+    image: couchdb
+    environment:
+      - COUCHDB_USER=couchdb
+      - COUCHDB_PASSWORD=couchdb
+      - COUCHDB_SECRET=cc291c043389b84f99ee4099ec354b958b4fa0ad915cbfa45c29310ead362f35
+    ports:
+      - 5984:5984
+    volumes:
+      - ./couchdb.ini:/opt/couchdb/etc/local.d/docker.ini
